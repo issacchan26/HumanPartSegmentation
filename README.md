@@ -1,7 +1,7 @@
 # Human Part Segmentation with Point Transformer
 This repo provides the model training and post processing algorithm of human point cloud data for body part segmentation. Each human point cloud have 10000 verts with .ply file and .txt annotation file.
 
-## Getting Started with our processing algorithm
+## Getting Started
 Use the pip to install dependencies, you may use conda instead
 
 ```bash
