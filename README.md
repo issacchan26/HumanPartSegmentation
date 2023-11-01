@@ -102,14 +102,14 @@ This repo is using Point Transformer with PYG framework as backbone. The model a
 We are using the point cloud data with 10000 verts for training. For each point cloud, we use .txt annotation file for training and .ply file for testing/validation. Please make sure that you prepare both .ply file and .txt annotation file before training and testing.  
 Before you start training, please modify below path/parameters in [train.py](train.py):  
 
-train_dataset_path = '/path to/train_data'
-eval_dataset_path = '/path to/eval_data'
-checkpoints_path = '/path to/checkpoints/'
-log_dir = '/path to/runs'
-body_parts = 6
-batch_size = 1
-lr = 0.0001
-epoch = 500
+train_dataset_path = '/path to/train_data'  
+eval_dataset_path = '/path to/eval_data'  
+checkpoints_path = '/path to/checkpoints/'  
+log_dir = '/path to/runs'  
+body_parts = 6  
+batch_size = 1  
+lr = 0.0001  
+epoch = 500  
 
 ## Number of body part
 The dafault option of body parts is 28, the labels are listed as below:  
@@ -149,30 +149,29 @@ There are four options for number of body parts:
     28: default  
 
 ## Training Logs
-This repo is using Tensorboard to save the logs,  
-Please run tensorboard --logdir /runs in the terminal to view the plots.
+This repo is using Tensorboard to save the logs, please run tensorboard --logdir /runs in the terminal to view the plots.
 
 ## Inference
 Before you start inference, please modify below path/parameters in [test.py](test.py):  
 
-test_dataset_path = '/path to/eval_data'
-model_path = '/path to/checkpoints/best.pt'
-ply_path = '/path to/test_data/input/'
-output_ply_path = '/path to/test_data/output/'
-body_part = 28
-acc_threshold = 0.76  # The model will keep replace the output .ply until it reached target accuracy threshold
-with_label = False  # The default setting is False, please change to True for validation
+test_dataset_path = '/path to/eval_data'  
+model_path = '/path to/checkpoints/best.pt'  
+ply_path = '/path to/test_data/input/'  
+output_ply_path = '/path to/test_data/output/'  
+body_part = 28  
+acc_threshold = 0.76  # The model will keep replace the output .ply until it reached target accuracy threshold  
+with_label = False  # The default setting is False, please change to True for validation  
 
 ## Validation
 The parameter with_label in [test.py](test.py) determines whether current stage is test or validation, False for test while True for validation.  
 When you would like to perform validation, please follow the below steps:  
-1. Place the .txt annotation in /test_data/raw
+1. Place the .txt annotation in /test_data/raw  
 2. Place the corresponding .ply files in /ply_data/input  
 3. Make sure the parameter with_label is True in [test.py](test.py) and run the script  
 
 ## Pretrained models
-This repo also provides pretrained models for 4, 6 and 28 classes.
-These models are trained with 41 human scans from real human data and FAUST, each of them has 10000 verts.
+This repo also provides pretrained models for 4, 6 and 28 classes.  
+These models are trained with 41 human scans from real human data and FAUST, each of them has 10000 verts.  
 
 ## Common Issues
 Q: The model output classes is not as expected, e.g. Expect 28 classes results but only got 4 classes results.  
