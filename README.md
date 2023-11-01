@@ -113,34 +113,34 @@ epoch = 500
 
 ## Number of body part
 The dafault option of body parts is 28, the labels are listed as below:  
-    0,   # rest of body
-    1,   # head
-    2,   # neck
-    3,   # right_shoulder
-    4,   # left_shoulder
-    5,   # right_upper_arm
-    6,   # left_upper_arm
-    7,   # right_elbow
-    8,   # left_elbow
-    9,   # right_fore_arm
-    10,  # left_fore_arm
-    11,  # right_wrist
-    12,  # left_wrist
-    13,  # right_hand
-    14,  # left_hand
-    15,  # main_body
-    16,  # right_hip
-    17,  # left_hip
-    18,  # right_thigh
-    19,  # left_thigh
-    20,  # right_knee
-    21,  # left_knee
-    22,  # right_leg
-    23,  # left_leg
-    24,  # right_ankle
-    25,  # left_ankle
-    26,  # right_foot
-    27   # left_foot
+    0,   # rest of body  
+    1,   # head  
+    2,   # neck  
+    3,   # right_shoulder  
+    4,   # left_shoulder  
+    5,   # right_upper_arm  
+    6,   # left_upper_arm  
+    7,   # right_elbow  
+    8,   # left_elbow  
+    9,   # right_fore_arm  
+    10,  # left_fore_arm  
+    11,  # right_wrist  
+    12,  # left_wrist  
+    13,  # right_hand  
+    14,  # left_hand  
+    15,  # main_body  
+    16,  # right_hip  
+    17,  # left_hip  
+    18,  # right_thigh  
+    19,  # left_thigh  
+    20,  # right_knee  
+    21,  # left_knee  
+    22,  # right_leg  
+    23,  # left_leg  
+    24,  # right_ankle  
+    25,  # left_ankle  
+    26,  # right_foot  
+    27   # left_foot  
 
 There are four options for number of body parts:  
     4: {0: main body, 1: head, 2: arm, 3: leg}  
@@ -149,7 +149,8 @@ There are four options for number of body parts:
     28: default  
 
 ## Training Logs
-This repo is using Tensorboard to save the logs, please type tensorboard --logdir /runs in the terminal to view the plots.
+This repo is using Tensorboard to save the logs,  
+Please run tensorboard --logdir /runs in the terminal to view the plots.
 
 ## Inference
 Before you start inference, please modify below path/parameters in [test.py](test.py):  
