@@ -170,7 +170,7 @@ When you would like to perform validation, please follow the below steps:
 3. Make sure the parameter with_label is True in [test.py](test.py) and run the script  
 
 ## Pretrained models
-This repo also provides pretrained models for 4, 6 and 28 classes.  
+This repo also provides pretrained models for 4, 6 and 28 classes in [checkpoints](checkpoints).  
 These models are trained with 41 human scans from real human data and FAUST, each of them has 10000 verts.  
 The below table shows the results of 200 epochs training:  
 | Class  | Training Accuracy | Validation Accuracy  |
