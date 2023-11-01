@@ -172,6 +172,21 @@ When you would like to perform validation, please follow the below steps:
 ## Pretrained models
 This repo also provides pretrained models for 4, 6 and 28 classes.  
 These models are trained with 41 human scans from real human data and FAUST, each of them has 10000 verts.  
+The below table shows the results of 200 epochs training:  
+| Class  | Training Accuracy | Validation Accuracy  |
+| -------| ----------------- | -------------------- | 
+|  4     | 0.965             | 0.953                |
+|  6     | 0.97              | 0.963                |
+|  14    | 0.902             | 0.869                |
+|  28    | 0.866             | 0.808                |
+
+And the testing results:  
+
+<p float="left">
+  <img src="/picture/snapshot00.png" width="300" />
+  <img src="/picture/snapshot02.png" width="300" /> 
+  <img src="picture/snapshot01.png" width="300" />
+</p>
 
 ## Common Issues
 Q: The model output classes is not as expected, e.g. Expect 28 classes results but only got 4 classes results.  
