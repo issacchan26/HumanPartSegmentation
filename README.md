@@ -183,9 +183,9 @@ The below table shows the results of 200 epochs training:
 And the testing results:  
 
 <p float="left">
-  <img src="/picture/snapshot00.png" width="300" />
-  <img src="/picture/snapshot02.png" width="300" /> 
-  <img src="picture/snapshot01.png" width="300" />
+  <img src="/picture/snapshot00.png" width="200" />
+  <img src="/picture/snapshot02.png" width="200" /> 
+  <img src="picture/snapshot01.png" width="200" />
 </p>
 
 ## Common Issues
