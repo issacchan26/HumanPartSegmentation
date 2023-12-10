@@ -78,7 +78,7 @@ for epoch in range(1, epoch+1):
     print('epoch:', epoch)
     train_acc, train_loss = train()
     if epoch%10 == 0:
-        torch.save(model.state_dict(), checkpoints_path + 'lastest.pt')
+        torch.save(model.state_dict(), checkpoints_path + 'latest.pt')
         eval_acc = validation(eval_loader)
         writer.add_scalars('Body Segmentation train', {'validation accuracy': eval_acc}, epoch)
         if eval_acc > best_eval_acc:
