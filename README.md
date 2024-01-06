@@ -192,6 +192,17 @@ And the testing results:
 Q: The model output classes is not as expected, e.g. Expect 28 classes results but only got 4 classes results.  
 A: Please delete the processed folder in train_data, eval_data and test_data when changes the number of classes.  
 
+Q: There are errors when changing the with_label from False to True:  
+'''  
+Traceback (most recent call last):  
+File "test.py", line 159, in predict(with_label=with_label)  
+File "test.py", line 142, in predict  
+eval_acc, pred_list = test(test_loader)  
+ValueError: not enough values to unpack (expected 2, got 1)  
+'''  
+A: When you change the with_label from False to True, you need to delete the "processed" folder in your parent data folder. As PYG will not replace the processed folder, the processed data will remain without labels so that the error will occur.  
+Please also remind that the ground truth are stored in .txt files while .ply cannot store any annotations. So the input data format is different between testing (with_label = False) and evaluation (with_label = True), you may reference to the eval_data folder and test_data folder for details.  
+
 Q: There is bug when reading .ply files, the extracted rows did not match original files.  
 A: Please check the number of verts in .ply files and the rows of header, the default setting will skip the header and read 10000 rows for xyz coordinates. Please modify the code if needed: rows 144,155 in [dataset.py](dataset.py) and rows 86, 103, 125 in [test.py](test.py).  
 
