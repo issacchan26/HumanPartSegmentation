@@ -11,7 +11,7 @@ pip install numpy
 pip install pandas
 ```
 
-## Point cLoud data structure
+## Point cloud data structure
 This repo is using [Semantic Segmentation Editor](https://github.com/Hitachi-Automotive-And-Industry-Lab/semantic-segmentation-editor.git) as labeling tool. It support .pcd file as input and output .txt file as annotation.  
 Please refer to [Human Point Cloud Annotation Tool](https://github.com/issacchan26/point-cloud-annotation) for annotation details.  
 
