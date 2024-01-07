@@ -23,8 +23,8 @@ transform = T.Compose([
 ])
 pre_transform = T.NormalizeScale()
 
-train_dataset = dataset = HumanSeg(train_dataset_path, include_normals=False, transform=transform, body_part=body_parts)
-eval_dataset = dataset = HumanSeg(eval_dataset_path, include_normals=False, transform=transform, body_part=body_parts)
+train_dataset = HumanSeg(train_dataset_path, include_normals=False, transform=transform, body_part=body_parts)
+eval_dataset = HumanSeg(eval_dataset_path, include_normals=False, transform=transform, body_part=body_parts)
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
 eval_loader = DataLoader(eval_dataset, batch_size=1, shuffle=False)
 
